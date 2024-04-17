@@ -5,17 +5,20 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home.component';
 import { ShapeComponent } from './shape/shape.component';
-
+import { InfoComponent } from './info/info.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     ShapeComponent,
-    HomeComponent
+    HomeComponent,
+    InfoComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     HttpClientModule,
+    MatIconModule
   ]
 })
 export class HomeModule { }

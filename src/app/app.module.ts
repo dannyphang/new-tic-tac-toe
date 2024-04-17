@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ShapeComponent } from './components/home/shape/shape.component';
 
-
 @NgModule({
   declarations: [
     ShapeComponent

@@ -2,21 +2,21 @@
   <div class="game_box">
     <div class="game_div">
       <div class="row_box">
-        <div class="box border-r-2 border-b-2" (click)="boxClicked(0)">
+        <div class="box border-r border-b" (click)="boxClicked(0)">
           <app-shape
             [shape]="gameList[0].Shape"
             [index]="gameList[0].Index"
             class="h-full w-full"
           ></app-shape>
         </div>
-        <div class="box border-b-2 border-x-2" (click)="boxClicked(1)">
+        <div class="box border-b border-x" (click)="boxClicked(1)">
           <app-shape
             [shape]="gameList[1].Shape"
             [index]="gameList[1].Index"
             class="h-full w-full"
           ></app-shape>
         </div>
-        <div class="box border-l-2 border-b-2" (click)="boxClicked(2)">
+        <div class="box border-l border-b" (click)="boxClicked(2)">
           <app-shape
             [shape]="gameList[2].Shape"
             [index]="gameList[2].Index"
@@ -25,21 +25,21 @@
         </div>
       </div>
       <div class="row_box">
-        <div class="box border-y-2 border-r-2" (click)="boxClicked(3)">
+        <div class="box border-y border-r" (click)="boxClicked(3)">
           <app-shape
             [shape]="gameList[3].Shape"
             [index]="gameList[3].Index"
             class="h-full w-full"
           ></app-shape>
         </div>
-        <div class="box border-2" (click)="boxClicked(4)">
+        <div class="box border" (click)="boxClicked(4)">
           <app-shape
             [shape]="gameList[4].Shape"
             [index]="gameList[4].Index"
             class="h-full w-full"
           ></app-shape>
         </div>
-        <div class="box border-y-2 border-l-2" (click)="boxClicked(5)">
+        <div class="box border-y border-l" (click)="boxClicked(5)">
           <app-shape
             [shape]="gameList[5].Shape"
             [index]="gameList[5].Index"
@@ -48,21 +48,21 @@
         </div>
       </div>
       <div class="row_box">
-        <div class="box border-r-2 border-t-2" (click)="boxClicked(6)">
+        <div class="box border-r border-t" (click)="boxClicked(6)">
           <app-shape
             [shape]="gameList[6].Shape"
             [index]="gameList[6].Index"
             class="h-full w-full"
           ></app-shape>
         </div>
-        <div class="box border-x-2 border-t-2" (click)="boxClicked(7)">
+        <div class="box border-x border-t" (click)="boxClicked(7)">
           <app-shape
             [shape]="gameList[7].Shape"
             [index]="gameList[7].Index"
             class="h-full w-full"
           ></app-shape>
         </div>
-        <div class="box border-l-2 border-t-2" (click)="boxClicked(8)">
+        <div class="box border-l border-t" (click)="boxClicked(8)">
           <app-shape
             [shape]="gameList[8].Shape"
             [index]="gameList[8].Index"
@@ -70,6 +70,16 @@
           ></app-shape>
         </div>
       </div>
+    </div>
+    <div class="button_div">
+      <button
+        mat-fab
+        class="help_button"
+        matTooltip="Click to see game rules about the new tic tac toe."
+        (click)="showInfo()"
+      >
+        <mat-icon>priority_high</mat-icon>
+      </button>
     </div>
   </div>
   <div class="info_div">

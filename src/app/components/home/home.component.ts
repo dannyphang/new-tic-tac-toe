@@ -1,16 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { ShapeComponent } from './shape/shape.component';
+import {
+  MatDialog,
+  MatDialogModule,
+} from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import {
+  MAT_TOOLTIP_DEFAULT_OPTIONS,
+  MatTooltipDefaultOptions,
+  MatTooltipModule,
+} from '@angular/material/tooltip';
+import { InfoComponent } from './info/info.component';
+
+export const myCustomTooltipDefaults: MatTooltipDefaultOptions = {
+  showDelay: 500,
+  hideDelay: 0,
+  touchendHideDelay: 0,
+};
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   standalone: true,
-  imports: [ShapeComponent]
+  imports: [ShapeComponent, MatIconModule, MatTooltipModule, MatButtonModule, MatDialogModule],
+  providers: [{ provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }]
 })
+
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialog: MatDialog
+  ) { }
 
   shapes = ['circle', 'cross', 'empty'];
   gameList: ShapeDTO[] = [];
@@ -137,7 +159,13 @@ export class HomeComponent implements OnInit {
     if (playerTwoWin && this.isPlayerOne) {
       this.playerTwoPoints++;
     }
+  }
 
+  showInfo() {
+    this.dialog.open(InfoComponent, {
+      height: '70vh',
+      width: '50vw',
+    });
   }
 }
 

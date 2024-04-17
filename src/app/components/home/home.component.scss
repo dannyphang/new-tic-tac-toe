@@ -22,9 +22,13 @@
   width: var(--box-size);
   height: var(--box-size);
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border-color: #bc13fe;
+}
+
+.box:hover {
   box-shadow: 0 0 0.1rem #fff, 0 0 0.1rem #fff, 0 0 1rem #bc13fe,
     0 0 0.5rem #bc13fe, 0 0 1.5rem #bc13fe;
 }
@@ -60,6 +64,14 @@
   align-items: center;
   font-size: 2rem;
   margin: 1rem;
+  color: white;
+}
+
+.player_icon:hover {
+  text-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe;
+  box-shadow: 0 0 0.1rem #fff, 0 0 0.1rem #fff, 0 0 1rem #bc13fe,
+    0 0 0.5rem #bc13fe, 0 0 1.5rem #bc13fe;
 }
 
 .player_1 {
@@ -72,6 +84,33 @@
 
 .player_text {
   color: white;
+  text-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe;
+}
+
+.button_div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.help_button {
+  color: white;
+  border: 0px solid white;
+  border-radius: 100%;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.help_button:hover {
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe;
   text-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe;
 }
