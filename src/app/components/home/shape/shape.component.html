@@ -1,0 +1,11 @@
+<div class="shape_size" *ngIf="shape === 'circle'">
+  <div class="circle" *ngIf="index !== 3"></div>
+  <div class="circle_fade" *ngIf="index === 3"></div>
+</div>
+
+<div class="shape_size" *ngIf="shape === 'cross'">
+  <div class="line_div">
+    <div class="cross_icon" *ngIf="index !== 3"></div>
+    <div class="cross_icon fade" *ngIf="index === 3"></div>
+  </div>
+</div>

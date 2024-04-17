@@ -1,0 +1,87 @@
+<div class="h-screen w-screen">
+  <div class="game_box">
+    <div class="game_div">
+      <div class="row_box">
+        <div class="box border-r-2 border-b-2" (click)="boxClicked(0)">
+          <app-shape
+            [shape]="gameList[0].Shape"
+            [index]="gameList[0].Index"
+            class="h-full w-full"
+          ></app-shape>
+        </div>
+        <div class="box border-b-2 border-x-2" (click)="boxClicked(1)">
+          <app-shape
+            [shape]="gameList[1].Shape"
+            [index]="gameList[1].Index"
+            class="h-full w-full"
+          ></app-shape>
+        </div>
+        <div class="box border-l-2 border-b-2" (click)="boxClicked(2)">
+          <app-shape
+            [shape]="gameList[2].Shape"
+            [index]="gameList[2].Index"
+            class="h-full w-full"
+          ></app-shape>
+        </div>
+      </div>
+      <div class="row_box">
+        <div class="box border-y-2 border-r-2" (click)="boxClicked(3)">
+          <app-shape
+            [shape]="gameList[3].Shape"
+            [index]="gameList[3].Index"
+            class="h-full w-full"
+          ></app-shape>
+        </div>
+        <div class="box border-2" (click)="boxClicked(4)">
+          <app-shape
+            [shape]="gameList[4].Shape"
+            [index]="gameList[4].Index"
+            class="h-full w-full"
+          ></app-shape>
+        </div>
+        <div class="box border-y-2 border-l-2" (click)="boxClicked(5)">
+          <app-shape
+            [shape]="gameList[5].Shape"
+            [index]="gameList[5].Index"
+            class="h-full w-full"
+          ></app-shape>
+        </div>
+      </div>
+      <div class="row_box">
+        <div class="box border-r-2 border-t-2" (click)="boxClicked(6)">
+          <app-shape
+            [shape]="gameList[6].Shape"
+            [index]="gameList[6].Index"
+            class="h-full w-full"
+          ></app-shape>
+        </div>
+        <div class="box border-x-2 border-t-2" (click)="boxClicked(7)">
+          <app-shape
+            [shape]="gameList[7].Shape"
+            [index]="gameList[7].Index"
+            class="h-full w-full"
+          ></app-shape>
+        </div>
+        <div class="box border-l-2 border-t-2" (click)="boxClicked(8)">
+          <app-shape
+            [shape]="gameList[8].Shape"
+            [index]="gameList[8].Index"
+            class="h-full w-full"
+          ></app-shape>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info_div">
+    <div class="info_box">
+      <div class="player_div">
+        <div class="player_icon player_1">1</div>
+        <div class="player_text">Score: {{ playerOnePoints }}</div>
+      </div>
+      <div class="player_div">
+        <div class="player_icon player_2">2</div>
+        <div class="player_text">Score: {{ playerTwoPoints }}</div>
+      </div>
+    </div>
+  </div>
+</div>
