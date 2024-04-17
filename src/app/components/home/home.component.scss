@@ -9,7 +9,7 @@
 
 .game_div {
   aspect-ratio: 1/1;
-  height: 90%;
+  height: 50%;
 }
 
 .row_box {
@@ -39,7 +39,7 @@
 
 .info_box {
   display: flex;
-  width: 60%;
+  width: 70%;
   height: 60%;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
@@ -74,4 +74,26 @@
   color: white;
   text-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe;
+}
+
+@media (min-width: 560px) {
+  .game_div {
+    height: 60%;
+  }
+}
+
+@media (min-width: 740px) {
+  .game_div {
+    height: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .game_div {
+    height: 90%;
+  }
+
+  .info_box {
+    width: 60%;
+  }
 }
