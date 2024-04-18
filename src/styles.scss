@@ -2,12 +2,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "PokemonFont"; /*a name to be used later*/
+  src: url("./assets/font//PokemonClassic.ttf"); /*URL to font*/
+}
 
 :root {
   --box-size: 100%;
   --shape-size: 80%;
   --player-icon-size: 30%;
+  --pokemon-font: "PokemonFont";
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "PokemonFont";
+}
+
+.pokemon_font {
+  font-family: var(--pokemon-font) !important;
+  line-height: 2;
+}
